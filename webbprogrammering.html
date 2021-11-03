@@ -13,8 +13,8 @@
 
     function showpage(pageid)
     {
-        var pos=$("#"+pageid).position().top;
-        $("body").animate({ scrollTop: pos }, 1500, "easeInOutSine");
+        var pagePosition=$("#"+pageid).position().top;
+        $("body").animate({ scrollTop: pagePosition }, 1500, "easeInOutSine");
         //1500 = speed of easing function "easeInOutSine"
     }    
 
