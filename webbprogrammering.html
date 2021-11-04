@@ -13,7 +13,7 @@
         
         nav{position:fixed;}
 
-        button {
+        nav button {
             cursor: pointer;
             background-color: var(--primary);
             color: #FFFFFF;
@@ -47,6 +47,11 @@
 
         <div id="page1" class="page">            
             <h1>PAGE 1</h1>
+            <form action='' method=''>
+                <label for='anvandarnamn'>Logga in</label>
+                <input name='anvandarnamn' type='text' placeholder='Användarnamn'/>
+            </form>
+            <button onclick="showpage('page2')">Ny användare</button>
         </div>
 
         <div id="page2" class="page">
