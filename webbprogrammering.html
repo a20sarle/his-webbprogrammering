@@ -34,7 +34,7 @@
         var pagePosition=$("#"+pageid).position().top;
         $("body").animate({ scrollTop: pagePosition }, 1500, "easeInOutSine");
         //1500 = speed of easing function "easeInOutSine"
-    }    
+    }
 
     </script>
     <body>
@@ -56,6 +56,17 @@
 
         <div id="page2" class="page">
             <h1>PAGE 2</h1>
+            <p>Registrera som ny användare</p>
+            <form action='' method=''>
+                <label for='reg_fornamn'>Förnamn</label>
+                <input name='reg_fornamn' type='text' placeholder='Förnamn'/>
+                <label for='reg_efternamn'>Efternamn</label>
+                <input name='reg_efternamn' type='text' placeholder='Efternamn'/>
+                <label for='reg_address'>Address</label>
+                <input name='reg_address' type='text' placeholder='Address'/>
+                <label for='reg_anvandarnamn'>Användarnamn</label>
+                <input name='reg_anvandarnamn' type='text' placeholder='Användarnamn'/>
+            </form>
         </div>
 
         <div id="page3" class="page">
