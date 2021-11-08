@@ -106,11 +106,20 @@
             <button type="submit">Sök</button>            
         </nav>
 
-        <div id="page1" class="page">            
+        <div id="page1" class="page">
+            <script>
+                function logIn(event)
+                {
+                    event.preventDefault();
+                    var anvandarnamn=document.getElementById("anvandarnamn").value;
+                    alert("Du angav '"+anvandarnamn+"' som ditt användarnamn");
+                }
+            </script>            
             <h1>PAGE 1</h1>
             <form action='' method=''>
-                <label for='anvandarnamn'>Logga in</label>
-                <input name='anvandarnamn' type='text' placeholder='Användarnamn'/>
+                <label for='anvandarnamn'>Användarnamn</label>
+                <input id='anvandarnamn' type='text'/>
+                <input type='submit' onclick="logIn(event)" value='Logga in'/>
             </form>
             <button onclick="showpage('page2')">Ny användare</button>
         </div>
