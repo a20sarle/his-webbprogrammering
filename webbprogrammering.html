@@ -7,6 +7,7 @@
         #page2{background:#def;}
         #page3{background:#fde;}
         #page4{background:rgb(230, 255, 221);}
+        #page5{background:rgb(243, 224, 163);}
     
         /* NAV BAR */
         .page{height:100%;}
@@ -90,6 +91,7 @@
             <button onclick="showpage('page2');">Page2</button>
             <button onclick="showElement('page3'), showpage('page3');">Page3</button>
             <button onclick="showpage('page4');">Page4</button>
+            <button onclick="showpage('page5');">Page5</button>
         </nav>
 
         <div id="page1" class="page">            
@@ -143,7 +145,45 @@
                         </figure>            
                     </figure>
                 </a>
+            </figure>
+<!---->            
+        </div>
+
+        <div id="page5" class="page">
+            <style>
+                .card-historik{
+                    height: 6rem;
+                }
+                figure[target=card_container-historik] {
+                    display: flex;
+                    flex-flow: wrap;
+                    flex-direction: row;
+                    justify-content: left;
+                    margin-left: 1.5rem;
+                }
+            </style>
+            <h1>PAGE 5</h1>
+            <p>Tidigare bokningar</p>
+            <figure target='card_container-historik'>
 <!---->
+                <a href="https://www.google.com/">
+                    <figure class="card card-historik" id='image1'>
+                        <figure>
+                            <p>This is a text</p>
+                        </figure>            
+                    </figure>
+                </a>
+<!---->
+<!---->
+                <a href="https://www.google.com/">
+                    <figure class="card card-historik" id='image2'>
+                        <figure>
+                            <p>This is a text</p>
+                        </figure>            
+                    </figure>
+                </a>
+            </figure>
+<!---->  
         </div>
     </body>
 </html>
