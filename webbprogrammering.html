@@ -11,18 +11,17 @@
     
         /* NAV BAR */
         .page{height:100%;}
-        .menu {height:64px;background:#f84}
         
-        nav{position:fixed;}
+        nav{position:fixed;float: right;}
 
-        nav button {
+        nav button, nav input {
             cursor: pointer;
             background-color: var(--primary);
             color: #FFFFFF;
             border: none;
             border-radius: 5px;
             font-size: 20px;
-            padding: 15px;
+            padding: 10px;
             width: auto;
         }
             button:hover{background-color: #d01b84;}
@@ -86,12 +85,14 @@
     }
     </script>
     <body>
-        <nav class="menu">
+        <nav>
             <button onclick="showpage('page1');">Page1</button>
             <button onclick="showpage('page2');">Page2</button>
             <button onclick="showElement('page3'), showpage('page3');">Page3</button>
             <button onclick="showpage('page4');">Page4</button>
             <button onclick="showpage('page5');">Page5</button>
+            <input type="text">
+            <button type="submit">Sök</button>            
         </nav>
 
         <div id="page1" class="page">            
@@ -184,6 +185,30 @@
                 </a>
             </figure>
 <!---->  
+        </div>
+
+        <div id="page6" class="page">
+            <style>
+                table{
+                    text-align: left;
+                }
+            </style>
+            <h1>PAGE 6</h1>
+            <p>Du sökte på [begrepp]</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sida</th>
+                        <th>Sammanhang</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[sidnamn]</td>
+                        <td>[paragraf]</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
