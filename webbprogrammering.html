@@ -8,6 +8,7 @@
         #page3{background:#fde;}
         #page4{background:rgb(230, 255, 221);}
     
+        /* NAV BAR */
         .page{height:100%;}
         .menu {height:64px;background:#f84}
         
@@ -25,55 +26,57 @@
         }
             button:hover{background-color: #d01b84;}
 
+        /* [SHOW] or [HIDE] ELEMENT */
         #page3{
             display: none;
         }
 
+        /* CARDS */
         figure[target=card_container] {
-                    display: flex;
-                    flex-flow: wrap;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-left: 1.5rem;
-                }
+            display: flex;
+            flex-flow: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 1.5rem;
+        }
 
-                .card {                    
-                    background-size: cover;
-                    color: #fff;
-                    border-radius: 5%;
-                    width: 250px;
-                    height: 290px;
-                    margin: 1.5rem;
-                    box-shadow: 0px 5px 5px 5px rgb(0, 0, 0, 0.1);
-                    min-width: 15rem;
-                    cursor: pointer;
-                    padding: 1rem;
-                }
+        .card {                    
+            background-size: cover;
+            color: #fff;
+            border-radius: 5%;
+            width: 250px;
+            height: 290px;
+            margin: 1.5rem;
+            box-shadow: 0px 5px 5px 5px rgb(0, 0, 0, 0.1);
+            min-width: 15rem;
+            cursor: pointer;
+            padding: 1rem;
+        }
 
-                .accent {
-                    width: .8rem;
-                    height: 2rem;
-                    border-radius: 2px;
-                    margin: 1rem;
-                    white-space: nowrap;
-                    text-indent: 1.5rem;
-                    background-color: var(--primary)
-                }
+        .accent {
+            width: .8rem;
+            height: 2rem;
+            border-radius: 2px;
+            margin: 1rem;
+            white-space: nowrap;
+            text-indent: 1.5rem;
+            background-color: var(--primary)
+        }
 
-                #image1{background-image: url(https://cdn.pixabay.com/photo/2016/01/19/16/48/teepee-1149402_960_720.jpg);}
-                #image2{background-image: url(https://cdn.pixabay.com/photo/2020/07/27/14/34/forest-5442598_960_720.jpg);}  
-    </style> 
+        #image1{background-image: url(https://cdn.pixabay.com/photo/2016/01/19/16/48/teepee-1149402_960_720.jpg);}
+        #image2{background-image: url(https://cdn.pixabay.com/photo/2020/07/27/14/34/forest-5442598_960_720.jpg);}
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>    
     <script>
-
+    /* SHOW PAGE */
     function showpage(pageid)
     {
         var pagePosition=$("#"+pageid).position().top;
         $("body").animate({ scrollTop: pagePosition }, 1500, "easeInOutSine");
         //1500 = speed of easing function "easeInOutSine"
     }
-
+    /* [SHOW] or [HIDE] ELEMENT */
     function showElement(showElement_id){
         document.getElementById(showElement_id).style.display = "block";
     }
