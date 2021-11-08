@@ -3,17 +3,18 @@
         :root{
             --primary: #f41e9b;
         }
+
+        /* PAGES */
         #page1{background:#fed;}
         #page2{background:#def;}
         #page3{background:#fde;}
         #page4{background:rgb(230, 255, 221);}
         #page5{background:rgb(243, 224, 163);}
+        #page5{background:rgb(163, 228, 243);}
     
         /* NAV BAR */
-        .page{height:100%;}
-        
+        .page{height:100%;}        
         nav{position:fixed;float: right;}
-
         nav button, nav input {
             cursor: pointer;
             background-color: var(--primary);
@@ -39,7 +40,6 @@
             justify-content: center;
             margin-left: 1.5rem;
         }
-
         .card {                    
             background-size: cover;
             color: #fff;
@@ -52,7 +52,6 @@
             cursor: pointer;
             padding: 1rem;
         }
-
         .accent {
             width: .8rem;
             height: 2rem;
@@ -62,9 +61,20 @@
             text-indent: 1.5rem;
             background-color: var(--primary)
         }
-
         #image1{background-image: url(https://cdn.pixabay.com/photo/2016/01/19/16/48/teepee-1149402_960_720.jpg);}
         #image2{background-image: url(https://cdn.pixabay.com/photo/2020/07/27/14/34/forest-5442598_960_720.jpg);}
+
+        /* CARDS - HISTORIK */
+        .card-historik{
+            height: 6rem;
+        }
+        figure[target=card_container-historik] {
+            display: flex;
+            flex-flow: wrap;
+            flex-direction: row;
+            justify-content: left;
+            margin-left: 1.5rem;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>    
@@ -85,6 +95,7 @@
     }
     </script>
     <body>
+
         <nav>
             <button onclick="showpage('page1');">Page1</button>
             <button onclick="showpage('page2');">Page2</button>
@@ -129,7 +140,6 @@
             <h1>PAGE 4</h1>
             <p>Boka glamping stuga</p>
             <figure target='card_container'>
-<!---->
                 <a href="https://www.google.com/">
                     <figure class="card" id='image1'>
                         <figure class="accent">
@@ -137,8 +147,6 @@
                         </figure>            
                     </figure>
                 </a>
-<!---->
-<!---->
                 <a href="https://www.google.com/">
                     <figure class="card" id='image2'>
                         <figure class="accent">
@@ -146,27 +154,13 @@
                         </figure>            
                     </figure>
                 </a>
-            </figure>
-<!---->            
+            </figure>       
         </div>
 
         <div id="page5" class="page">
-            <style>
-                .card-historik{
-                    height: 6rem;
-                }
-                figure[target=card_container-historik] {
-                    display: flex;
-                    flex-flow: wrap;
-                    flex-direction: row;
-                    justify-content: left;
-                    margin-left: 1.5rem;
-                }
-            </style>
             <h1>PAGE 5</h1>
             <p>Tidigare bokningar</p>
             <figure target='card_container-historik'>
-<!---->
                 <a href="https://www.google.com/">
                     <figure class="card card-historik" id='image1'>
                         <figure>
@@ -174,8 +168,6 @@
                         </figure>            
                     </figure>
                 </a>
-<!---->
-<!---->
                 <a href="https://www.google.com/">
                     <figure class="card card-historik" id='image2'>
                         <figure>
@@ -183,8 +175,7 @@
                         </figure>            
                     </figure>
                 </a>
-            </figure>
-<!---->  
+            </figure> 
         </div>
 
         <div id="page6" class="page">
@@ -210,5 +201,6 @@
                 </tbody>
             </table>
         </div>
+
     </body>
 </html>
